@@ -1,5 +1,51 @@
 #include <stdio.h>
 
+void moverRainha(int casas){
+
+    if (casas > 0)
+    {
+        printf("-Rainha: Move para a esquerda\n");
+        moverRainha(casas - 1);
+    }
+}
+
+void moverTorre(int casas){
+
+    if (casas > 0)
+    {
+        printf("-Torre: Move para Cima\n");
+        moverTorre(casas - 1);
+    }
+}
+
+
+void moverBispo(int casas){
+
+    for (int direita = 1; direita <= 3; direita++){
+
+        for (int cima = 1; cima <= 1; cima++)
+        {
+            printf("-Bispo Move para cima\n", cima);
+        }
+    printf("-Bispo Move Para a Direita\n");
+    }
+}
+
+void moverCavalo(int casas){
+
+    for (int casa1 = 1, casa2 = 2; casa1 <= casa2; casa1++, casa2--){
+
+        for (int direita = 1;direita <= 2; direita++)
+        {
+            printf("-Cavalo: Move para Cima\n");
+        }
+
+    printf("-Cavalo: Move para Direita\n", casa1);
+    }
+}
+
+
+
 int main(){
 
     int opcao;
@@ -18,47 +64,29 @@ int main(){
 
         case 1:
             
-    printf("Movimentação da Rainha:\n\n");
 
     //Movimentos da Rainha
-    for(int i = 1; i <= 8; i++){
+    printf("Movimentação da Rainha:\n\n");
+    moverRainha(8);
 
-    printf("-Rainha: Move para a esquerda\n", i);
 
-}
-
-    printf("\nAgora Movimentação da Torre:\n\n");
 
     //Movimentos da torre
-    for(int i = 1; i <= 5; i++){
+    printf("\nAgora Movimentação da Torre:\n\n");
+    moverTorre(5);
 
-    printf("-Torre: Move para Cima\n", i);
 
-}
-    printf("\nAgora Movimentação do Bispo:\n\n");
 
     //Movimentos do Bispo
-    for(int i = 1; i <= 5; i++){
+    printf("\nAgora Movimentação do Bispo:\n\n");
+    moverBispo(3);
 
-    printf("-Bispo: Move para a Direita e Esquerda\n", i);
 
-}
-
-printf("\nAgora Movimentação do Cavalo:\n\n");
 
     //Movimentos do Cavalo
+    printf("\nAgora Movimentação do Cavalo:\n\n");
+    moverCavalo(3);
 
-    int MovimentoCavalo = 1;
-
-    while (MovimentoCavalo--){
-
-    for (int j = 0; j < 2; j++)
-    {
-        printf("-Cavalo: Move para cima\n", j);
-    }
-    printf("-Cavalo: Move para Direita\n", MovimentoCavalo);
-
-    }
 
     printf("\nFim dos movimentos, ate a proxima...\n\n");
 
