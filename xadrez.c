@@ -3,11 +3,9 @@
 int main(){
 
     int opcao;
-    //Apresentações Inciais do Jogo
+
     printf("-------------------\n\n");
     printf("Bem vindo ao Jogo de Xadrez.\n");
-
-    //Menu interativo de Iniciação
     printf ("Menu Inicial\n \n");
         printf ("( 1 ): Iniciar Movimentações.\n");
         printf ("( 2 ): Sair.\n \n");
@@ -20,12 +18,12 @@ int main(){
 
         case 1:
             
-    printf("Movimentação ddo Bispo:\n\n");
+    printf("Movimentação da Rainha:\n\n");
 
-    //Movimentos da Bispo
-    for(int i = 1; i <= 5; i++){
+    //Movimentos da Rainha
+    for(int i = 1; i <= 8; i++){
 
-    printf("%d-Bispo: Move Cima e Direita\n", i);
+    printf("-Rainha: Move para a esquerda\n", i);
 
 }
 
@@ -34,17 +32,33 @@ int main(){
     //Movimentos da torre
     for(int i = 1; i <= 5; i++){
 
-    printf("%d-Torre: Move para Direita\n", i);
+    printf("-Torre: Move para Cima\n", i);
 
 }
-    printf("\nAgora Movimentação da Rainha:\n\n");
+    printf("\nAgora Movimentação do Bispo:\n\n");
 
-    //Movimentos da Rainha
-    for(int i = 1; i <= 8; i++){
+    //Movimentos do Bispo
+    for(int i = 1; i <= 5; i++){
 
-    printf("%d-Rainha: Move para a Esquerda\n", i);
+    printf("-Bispo: Move para a Direita e Esquerda\n", i);
 
 }
+
+printf("\nAgora Movimentação do Cavalo:\n\n");
+
+    //Movimentos do Cavalo
+
+    int MovimentoCavalo = 1;
+
+    while (MovimentoCavalo--){
+
+    for (int j = 0; j < 2; j++)
+    {
+        printf("-Cavalo: Move para cima\n", j);
+    }
+    printf("-Cavalo: Move para Direita\n", MovimentoCavalo);
+
+    }
 
     printf("\nFim dos movimentos, ate a proxima...\n\n");
 
